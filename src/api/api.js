@@ -18,7 +18,7 @@ export default function requestService(url, options = {}) {
     options,
   };
 
-  return fetch(`https://justguess.herokuapp.com` + url,extraParameters)
+  return fetch(window.location.href + url,extraParameters)
     .then(res => callBackFunction(res))
     .catch(error => console.log(error))
         
