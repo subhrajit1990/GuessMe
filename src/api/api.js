@@ -18,7 +18,7 @@ export default function requestService(url, options = {}) {
     options,
   };
 
-  return fetch(`http://localhost:8080` + url,extraParameters)
+  return fetch(`https://sugame.herokuapp.com` + url,extraParameters)
     .then(res => callBackFunction(res))
     .catch(error => console.log(error))
         
