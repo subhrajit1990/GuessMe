@@ -1,5 +1,5 @@
 function callBackFunction(pRes) {
-	console.log("data ::: "+JSON.stringify(pRes));
+	console.log("data :::"+JSON.stringify(pRes));
   if(pRes.status >= 200 &&  pRes.status < 300)
 	 return pRes;
   
