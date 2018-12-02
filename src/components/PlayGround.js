@@ -3,7 +3,7 @@ import FirstScreen from './FirstScreen';
 import CardLayout from './CardLayout';
 import requestService from '../api/api';
 
-const API = 'public/staticData/cardList.json';
+const API = 'users/cardList';
 const numCardsToMatch = 2;
 
 export default class PlayGround extends React.Component {
