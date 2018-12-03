@@ -2,19 +2,15 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-mode: "production",
+mode: "development",
   devtool: 'source-map',
-  entry: [
-    
-    'react-hot-loader/patch',
-    './src/index'
-  ],
-
+  entry: path.join(__dirname, './src/index.js'),
   output: {
     path: path.join(__dirname, 'public'),
-    filename: 'bundle.js',
-    publicPath: '/public/'
+    filename: 'bundle.js'
   },
+
+
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

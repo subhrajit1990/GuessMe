@@ -8,7 +8,8 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config ./webpack.prod.config.js",
     "start": "node app.js",
-    "dev": "webpack-dev-server --hot --history-api-fallback --open"
+    "dev": "webpack-dev-server --hot --history-api-fallback --open",
+    "server": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -21,13 +22,13 @@
     "babel-preset-es2017": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
-    "cors": "^2.8.5",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router": "^4.3.1",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+"cors": "^2.8.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
@@ -45,6 +46,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.12.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "cors": "^2.8.5"
   }
 }

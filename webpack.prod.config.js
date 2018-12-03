@@ -15,6 +15,8 @@ mode: "production",
     publicPath: '/public/'
   },
 
+
+
   plugins: [
    
     new webpack.DefinePlugin({

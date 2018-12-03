@@ -10,16 +10,19 @@ function callBackFunction(pRes) {
 
 export default function requestService(url, options = {}) {
   const extraParameters = {
-  	'credentials': 'omit',
+  	
     headers: {
+	'Access-Control-Allow-Origin':'*',
     	'Content-Type': 'application/json',
      	'Accept': 'application/json',
     },
     options,
   };
 
-  return fetch("https://myapplicationdata.herokuapp.com/" + url,extraParameters)
+  return fetch("https://myapplicationdata.herokuapp.com/"+url,extraParameters)
     .then(res => callBackFunction(res))
     .catch(error => console.log(error))
         
 }
+
+
