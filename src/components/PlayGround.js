@@ -2,9 +2,10 @@ import React,{Fragment} from 'react';
 import FirstScreen from './FirstScreen'; 
 import CardLayout from './CardLayout';
 import requestService from '../api/api';
-
+import axios from 'axios';
 const API = 'users/cardList';
 const numCardsToMatch = 2;
+
 
 export default class PlayGround extends React.Component {
 
@@ -71,6 +72,7 @@ export default class PlayGround extends React.Component {
 
   shuffleCards(){
       
+    
   	requestService(API)
     .then(response => response.json())
     .then(this.cardDetailsList);    
