@@ -26,7 +26,11 @@ app.use(function(req, res, next) {
 // });
 
     app.use('/public',publicPath);   
-    app.get('https://myapplicationdata.herokuapp.com/', function (req, res) {res.sendFile(indexPath) });
+    app.get('/', function (req, res) {res.sendFile(indexPath) });
+
+    app.get("https://myapplicationdata.herokuapp.com/users/cardList",function(req,res){
+    	console.log("Hi RESPONSE "+JSON.stringify(res));
+    })
 
    return app;
   }
