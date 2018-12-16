@@ -26,7 +26,7 @@ app.use(function(req, res, next) {
 // });
 
     app.use('/public',publicPath);   
-    app.get('/', function (req, res) {res.sendFile(indexPath) });
+    app.get('https://myapplicationdata.herokuapp.com/', function (req, res) {res.sendFile(indexPath) });
 
    return app;
   }
