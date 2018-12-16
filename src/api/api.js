@@ -13,7 +13,7 @@ export default function requestService(url, options = {}) {
     options,
   };
 
-  return fetch(url,extraParameters)
+  return fetch("https://myapplicationdata.herokuapp.com"+url,extraParameters)
     .then(res => callBackFunction(res))
     .catch(error => console.log(error))
         
