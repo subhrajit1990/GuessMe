@@ -4,16 +4,16 @@ const express = require('express')
 
 module.exports = {
   app: function () {
-   // var app = express();
+   var app = express();
 	
-	const router = express.Router();
+
 
     const indexPath = path.join(__dirname, 'index.html');
     const publicPath = express.static(path.join(__dirname, 'public'));
  console.log("YES EXPRESSSSSSSSSSSSS ME ");
 
 
-router.use(function(req, res, next) {
+app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -25,9 +25,9 @@ router.use(function(req, res, next) {
 //   next();
 // });
 
-    router.use('/public',publicPath);   
-    router.get('/', function (req, res) {res.sendFile(indexPath) });
+    app.use('/public',publicPath);   
+    app.get('/', function (req, res) {res.sendFile(indexPath) });
 
-   return router;
+   return app;
   }
 }
